@@ -1,0 +1,37 @@
+exp_name: "ernie_vl_full_2025-09-29all"
+output_dir: "results"
+seed: 0
+
+data:
+  tasks_path: "data/tasks.jsonl"
+  gold_path: "data/gold.jsonl"
+
+run:
+  rings: ["R1", "R2", "R3"]
+  early_stop: false          # 不早停，全部跑完
+  concurrency: 1             # 建议保持 1，避免API压力过大
+  start_idx: 0               # 从第 0 题开始
+  max_items: null            # null = 全量
+  timeout_s: 90
+  max_output_tokens: 2048
+  dump_raw: true
+  max_retries: 5
+  retry_backoff: 1.0
+  resume_from_logs: false
+  fail_soft: true
+
+judge:
+  abs_tol: 0.0
+  rel_tol: 0.0
+  allow_fraction: true
+  require_unit_match: true
+  forbid_rounding: true
+  forbid_up_round: true
+  minimal_answer: true
+
+model:
+  provider: "qianfan"                     # 已在 run_qianfan.bat 配置
+  name: "ernie-4.5-turbo-vl"              # 多模态模型
+  temperature: 0
+  base_url: null                          # 从环境变量走，不要写死
+  api_key_env: "QIANFAN_API_KEY"

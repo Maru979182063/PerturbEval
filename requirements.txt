@@ -1,0 +1,18 @@
+# requirements.txt —— PerturbEval (MVP + 出图/报表)
+
+# —— 核心调用/配置 ——
+openai>=1.51.0,<2
+httpx>=0.27.2,<0.28
+PyYAML>=6.0.1,<7
+tqdm>=4.66.4,<5
+regex>=2024.4.16
+
+# —— 出图 & 表格读取 ——
+pandas>=2.2.2        # 表格汇总（CSV/XLSX）
+matplotlib>=3.8      # 画图（plot.py）
+openpyxl>=3.1        # 读取 .xlsx
+xlrd==1.2.0          # 读取老式 .xls（必须锁 1.2.0）
+
+# （可选）Windows 终端颜色美化
+# colorama>=0.4.6 ; platform_system == "Windows"
+

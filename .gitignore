@@ -1,0 +1,12 @@
+# venv / IDE
+.venv/
+venv/
+.idea/
+__pycache__/
+
+# logs
+results/logs/
+*.log
+
+# OS
+.DS_Store
