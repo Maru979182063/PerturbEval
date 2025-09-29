@@ -16,9 +16,10 @@ python scripts/tabular2metrics.py --in results/reports/run.xlsx --out results/re
 
 # 生成图表（输出到 assets/）
 python scripts/plot.py --metrics results/reports/metrics.json --outdir assets --title "PerturbEval (demo)"
+```
 
-
-##目录结构
+## 目录结构
+```
 PerturbEval/
 ├─ adapters/           # 模型调用
 ├─ data/               # 题库与答案
@@ -36,11 +37,14 @@ PerturbEval/
 ├─ requirements.txt
 ├─ LICENSE
 └─ README.md
+```
 
-示例结果
-<div align="center"> <img src="assets/perf_by_prompt.png" width="45%"> <img src="assets/robustness_quadrant.png" width="45%"> </div>
+## 示例结果
+<img width="1080" height="720" alt="perf_by_prompt" src="https://github.com/user-attachments/assets/30e07b31-c859-43de-b14a-7dfc430c4020" />
+<img width="1080" height="720" alt="robustness_quadrant" src="https://github.com/user-attachments/assets/0bd5028a-078a-4a87-a484-38090aa27552" />
 
-License
 
+## License
 MIT © 2025 Maru979182063
+
 
